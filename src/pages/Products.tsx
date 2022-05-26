@@ -17,13 +17,18 @@ const Products = () => {
             <>
               {data && data?.getAllProducts?.__typename === 'Products' && (
                 <div className="text-center self-center max-w-2xl mx-auto w-[90%] h-fit">
-                  <h2 className="pb-8 font-bold text-xl flex items-center justify-evenly">
-                    Products (starters, main courses, dessert and drinks){' '}
+                  <h2 className="flex items-center pb-8 text-xl font-bold justify-evenly">
+                    Products (starters, main courses, dessert and drinks)
                     <Link
                       to="/products/create"
                       className="text-white bg-primary-500 hover:bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2"
                     >
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <path
                           fillRule="evenodd"
                           d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
@@ -32,7 +37,7 @@ const Products = () => {
                       </svg>
                     </Link>
                   </h2>
-                  <div className="relative overflow-x-auto shadow-md rounded-lg custom-scrollbar">
+                  <div className="relative overflow-x-auto rounded-lg shadow-md custom-scrollbar">
                     <table className="w-full text-sm text-left text-gray-500">
                       <thead className="text-xs text-white uppercase bg-primary-500">
                         <tr>
@@ -70,8 +75,27 @@ const Products = () => {
                 </div>
               )}
               {data && data?.getAllProducts?.__typename === 'ProductNotFound' && (
-                <div className="flex flex-col justify-center items-center h-full mx-auto self-center">
-                  <h2 className="pb-8 font-bold text-xl">Oops! No products available currently!</h2>
+                <div className="flex flex-col items-center self-center justify-center h-full mx-auto">
+                  <h2 className="flex items-center pb-8 text-xl font-bold justify-evenly">
+                    Oops! No products available currently!
+                    <Link
+                      to="/products/create"
+                      className="text-white bg-primary-500 hover:bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2"
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                          clipRule="evenodd"
+                        ></path>
+                      </svg>
+                    </Link>
+                  </h2>
                   <img
                     className="rounded-lg shadow-md"
                     src="images/no_products.webp"
